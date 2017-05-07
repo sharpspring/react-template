@@ -24,6 +24,9 @@ There are a few files that should have changed when using `setup.js`.
 * `deploy.js`
 * `package.json`
 * `README.md`
+* `scoutfile/app-scout.js`
+* `scoutfile/build.js`
+* `scoutfile/deploy.js`
 
 Some files should be removed
 
