@@ -23,5 +23,6 @@ There are a few files that should have changed when using `setup.js`.
 * `Jenkinsfile`
 * `deploy.js`
 * `package.json`
+* `README.md`
 
 If these files didn't update to point to the new repo, then please open an issue to report this.
