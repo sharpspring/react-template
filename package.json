@@ -61,7 +61,7 @@
     "start": "node server.js",
     "test": "./node_modules/jest/bin/jest.js",
     "build": "rimraf dist && webpack --config ./webpack.production.config.js --progress --profile --colors",
-    "deploy": "npm run build && node deploy"
+    "deploy": "yarn build && node deploy"
   },
   "repository": {
     "type": "git",

@@ -37,5 +37,5 @@ const setupRepo = (projectName) => {
   });
 }
 
-prompt('Please enter the name of your new project:', setupRepo);
+prompt('Please enter the name of your new project: ', setupRepo);
 

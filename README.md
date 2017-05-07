@@ -4,6 +4,7 @@ A out-of-box solution to spin up a new react-redux skeleton for SharpSpring fron
 ## Pre-requisites
 * Permissions to create new projects in the SharpSpring organization
 * Node v7.10.0
+* yarn
 
 ## Getting Started
 
