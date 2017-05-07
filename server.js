@@ -1,6 +1,7 @@
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config');
+/* eslint-disable no-console */
+const webpack = require('webpack');
+const WebpackDevServer = require('webpack-dev-server');
+const config = require('./webpack.config');
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
@@ -16,12 +17,13 @@ new WebpackDevServer(webpack(config), {
     hash: false,
     timings: false,
     chunks: false,
-    chunkModules: false
-  }
-}).listen(3000, 'localhost', function(err) {
+    chunkModules: false,
+  },
+}).listen(3000, 'localhost', (err) => {
   if (err) {
-    console.log(err);
+    return console.log(err);
   }
 
   console.log('Listening at https://localhost:3000');
+  return console.log('webpack: building...');
 });
