@@ -16,24 +16,18 @@ const prompt = (question, callback) => {
   stdin.once('data', data => callback(data.toString().trim()));
 };
 
-const setupFile = (fileName, projectName) => {
-  const data = fs.readFileSync(fileName, 'utf-8');
+const setupFile = (projectName, src, dest = src) => {
+  const data = fs.readFileSync(src, 'utf-8');
   const newValue = data.replace(/(\${projectName})/gm, projectName);
-  console.log(newValue);
-  fs.writeFileSync(fileName, newValue, 'utf-8');
-
-  console.log(`${fileName} is updated`);
-};
-
-const setupReadme = () => {
-
+  fs.writeFileSync(dest, newValue, 'utf-8');
+  console.log(`${dest} is updated`);
 };
 
 const setupRepo = (projectName) => {
-  setupFile('./Jenkinsfile', projectName);
-  setupFile('./package.json', projectName);
-  setupFile('./deploy.js', projectName);
-  setupReadme();
+  setupFile(projectName, './Jenkinsfile');
+  setupFile(projectName, './package.json');
+  setupFile(projectName, './deploy.js');
+  setupFile(projectName, './projectREADME.md', './README.md');
   fs.unlink('./setup.js', (err) => {
     if (err) {
       return console.log(err);
