@@ -1,0 +1,5 @@
+{
+  "scoutHost": "https://storage.googleapis.com/",
+  "scoutHostLocal": "https://localhost:3000/",
+  "appJS": "main.js"
+}

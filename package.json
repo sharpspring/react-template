@@ -51,6 +51,7 @@
     "react-addons-test-utils": "^15.4.1",
     "react-test-renderer": "^15.4.1",
     "rimraf": "^2.5.4",
+    "scoutfile": "^3.0.3",
     "stats-webpack-plugin": "^0.4.2",
     "validate-commit-msg": "^2.8.2",
     "webpack": "^1.13.3",
@@ -61,7 +62,9 @@
     "start": "node server.js",
     "test": "./node_modules/jest/bin/jest.js",
     "build": "rimraf dist && webpack --config ./webpack.production.config.js --progress --profile --colors",
-    "deploy": "yarn build && node deploy"
+    "deploy": "yarn build && node deploy",
+    "build-scout": "node scoutfile/build",
+    "deploy-scout": "node scoutfile/deploy"
   },
   "repository": {
     "type": "git",

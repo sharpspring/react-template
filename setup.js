@@ -27,6 +27,9 @@ const setupRepo = (projectName) => {
   setupFile(projectName, './Jenkinsfile');
   setupFile(projectName, './package.json');
   setupFile(projectName, './deploy.js');
+  setupFile(projectName, './scoutfile/app-scout.js');
+  setupFile(projectName, './scoutfile/build.js');
+  setupFile(projectName, './scoutfile/deploy.js');
   setupFile(projectName, './projectREADME.md', './README.md');
   fs.unlinkSync('./setup.js');
   console.log('setup.js has been deleted');
