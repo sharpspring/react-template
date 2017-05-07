@@ -28,14 +28,12 @@ const setupRepo = (projectName) => {
   setupFile(projectName, './package.json');
   setupFile(projectName, './deploy.js');
   setupFile(projectName, './projectREADME.md', './README.md');
-  fs.unlink('./setup.js', (err) => {
-    if (err) {
-      return console.log(err);
-    }
-    console.log('setup.js has been deleted');
-    return console.log('Setup is complete. Please commit these changes to get started!');
-  });
+  fs.unlinkSync('./setup.js');
+  console.log('setup.js has been deleted');
+  fs.unlinkSync('./projectREADME.md');
+  console.log('setup.js has been deleted');
+  console.log('Setup is complete. Please commit these changes to get started!');
+  process.exit(0);
 };
 
 prompt('Please enter the name of your new project: ', setupRepo);
-
