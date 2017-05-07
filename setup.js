@@ -31,7 +31,7 @@ const setupRepo = (projectName) => {
   fs.unlinkSync('./setup.js');
   console.log('setup.js has been deleted');
   fs.unlinkSync('./projectREADME.md');
-  console.log('setup.js has been deleted');
+  console.log('projectREADME.md has been deleted');
   console.log('Setup is complete. Please commit these changes to get started!');
   process.exit(0);
 };
