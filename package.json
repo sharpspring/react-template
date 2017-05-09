@@ -69,7 +69,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sharpspring/${projectName}.git"
+    "url": "git+https://github.com/${accountName}/${projectName}.git"
   },
   "git": {
     "scripts": {

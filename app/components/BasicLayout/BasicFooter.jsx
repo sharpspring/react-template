@@ -6,10 +6,10 @@ const AuthFooter = () =>
   <div style={styles}>
     <ul style={styles.list}>
       <li style={styles.list.listItem}>
-        <a href="http://sharpspring.com/legal/terms" style={styles.list.listItem.link}>Terms of Service</a>
+        <a href="/legal/terms" style={styles.list.listItem.link}>Terms of Service</a>
       </li>
       <li style={styles.list.listItem}>
-        <a href="http://sharpspring.com/legal/privacy" style={styles.list.listItem.link}>Privacy Policy</a>
+        <a href="/legal/privacy" style={styles.list.listItem.link}>Privacy Policy</a>
       </li>
     </ul>
 
