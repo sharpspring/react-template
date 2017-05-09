@@ -1,10 +1,10 @@
 ![](http://sharpspring.com/wp-content/uploads/2016/05/ssLogo.png)
 ![](http://jpsierens.com/wp-content/uploads/2016/06/react-eco-wp.gif)
 
-# SharpSpring Front End
+# ${projectName} Front End
 
 ## Introduction
-This repository is a React/Redux project for ${projectName} application for SharpSpring.
+This repository is a React/Redux project for ${projectName}.
 
 Please check out our [documentation](docs/README.md) in the `docs/` folder.
 
@@ -24,13 +24,13 @@ yarn start
 ```
 
 ## Opening the code in a browser
-When you open any SharpSpring instance that serves a scoutfile, the latest production ${projectName} application will serve by default. This assumes the correct config exists. You can override this with the `scout` url parameter.
+When you open any instance that serves a scoutfile, the latest production ${projectName} application will serve by default. This assumes the correct config exists. You can override this with the `scout` url parameter.
 
-`http://app.sharpspring.localhost.com/app?scout=dev`
+`localhost/app?scout=dev`
 
 This will override the scout to use the application you are serving from localhost, using the `npm start` command.
 
-`http://app.sharpspring.localhost.com/app?scout=${scoutHash}`
+`localhost/app?scout=${scoutHash}`
 
 This will override the scout to use a deployed application from the `${projectName}-dev` bucket, which lives in Google Cloud. Note that it will always serve from the `${projectName}-dev` bucket using this method, and you must have an admin account to do so.
 

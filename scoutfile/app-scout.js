@@ -12,8 +12,8 @@ var baseUrl = config.scoutHost + projectName;
 var scoutVersion = getQueryVariable('scout');
 var language = 'en_US';
 
-if (window.SharpSpring && window.SharpSpring.user && window.SharpSpring.user.locale) {
-  language = window.SharpSpring.user.locale;
+if (window.scoutfileConfig && window.scoutfileConfig.user && window.scoutfileConfig.user.locale) {
+  language = window.scoutfileConfig.user.locale;
 }
 
 if (scoutVersion === 'dev') {
