@@ -44,7 +44,7 @@ const setupRepo = () => {
   process.exit(0);
 };
 
-prompt('Please enter the name of your account or organization', (input) => {
+prompt('Please enter the name of your account or organization: ', (input) => {
   accountName = input;
   prompt('Please enter the name of your new project: ', (secondInput) => {
     projectName = secondInput;
