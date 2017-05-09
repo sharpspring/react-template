@@ -6,6 +6,9 @@
 /* eslint-disable no-console */
 const fs = require('fs');
 
+let accountName;
+let projectName;
+
 const prompt = (question, callback) => {
   const stdin = process.stdin;
   const stdout = process.stdout;
@@ -16,21 +19,23 @@ const prompt = (question, callback) => {
   stdin.once('data', data => callback(data.toString().trim()));
 };
 
-const setupFile = (projectName, src, dest = src) => {
+const setupFile = (src, dest = src) => {
   const data = fs.readFileSync(src, 'utf-8');
-  const newValue = data.replace(/(\${projectName})/gm, projectName);
+  const newValue = data
+    .replace(/(\${projectName})/gm, projectName)
+    .replace(/(\${accountName})/gm, accountName);
   fs.writeFileSync(dest, newValue, 'utf-8');
   console.log(`${dest} is updated`);
 };
 
-const setupRepo = (projectName) => {
-  setupFile(projectName, './Jenkinsfile');
-  setupFile(projectName, './package.json');
-  setupFile(projectName, './deploy.js');
-  setupFile(projectName, './scoutfile/app-scout.js');
-  setupFile(projectName, './scoutfile/build.js');
-  setupFile(projectName, './scoutfile/deploy.js');
-  setupFile(projectName, './projectREADME.md', './README.md');
+const setupRepo = () => {
+  setupFile('./Jenkinsfile');
+  setupFile('./package.json');
+  setupFile('./deploy.js');
+  setupFile('./scoutfile/app-scout.js');
+  setupFile('./scoutfile/build.js');
+  setupFile('./scoutfile/deploy.js');
+  setupFile('./projectREADME.md', './README.md');
   fs.unlinkSync('./setup.js');
   console.log('setup.js has been deleted');
   fs.unlinkSync('./projectREADME.md');
@@ -39,4 +44,10 @@ const setupRepo = (projectName) => {
   process.exit(0);
 };
 
-prompt('Please enter the name of your new project: ', setupRepo);
+prompt('Please enter the name of your account or organization', (input) => {
+  accountName = input;
+  prompt('Please enter the name of your new project: ', (secondInput) => {
+    projectName = secondInput;
+    setupRepo();
+  });
+});
