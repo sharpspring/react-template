@@ -2,7 +2,7 @@ podTemplate(cloud:'local cluster', label: '${projectName}', name:'${projectName}
     containers: [
         containerTemplate(
             name: 'jnlp',
-            image: 'us.gcr.io/sharpspring-us/jenkins-k8s-slave:latest',
+            image: 'TODO CONTAINER IMAGE LINK',
             workingDir: '/root/',
             resourceLimitMemory: '3Gi',
             resourceRequestMemory: '3Gi',
