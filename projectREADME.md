@@ -44,7 +44,7 @@ Upon opening the application in a development environment, the redux dev monitor
 ## Testing
 ```yarn test```
 
-Use jest and enzyme to test this applcation. All things that are tested fall under one of the three categories:
+Use jest and enzyme to test this application. All things that are tested fall under one of the three categories:
 
 * React Component
 * React Container
