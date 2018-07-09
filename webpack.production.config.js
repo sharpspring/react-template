@@ -14,7 +14,6 @@ module.exports = Object.keys(languages).map(function(language) {
   return {
     // The entry file. All your app roots fromn here.
     entry: [
-      'babel-polyfill',
       path.join(__dirname, 'app/index.jsx')
     ],
     // Where you want the output to go
