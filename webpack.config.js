@@ -14,7 +14,6 @@ if (language !== 'en_US') {
 module.exports = {
   devtool: 'source-map',
   entry: [
-    'babel-polyfill',
     'webpack-dev-server/client?https://localhost:3000',
     'webpack/hot/only-dev-server',
     'react-hot-loader/patch',

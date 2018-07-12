@@ -1,3 +1,7 @@
+/* eslint-disable */
+if ((typeof(window) !== "undefined" && !window._babelPolyfill) || (global && !global._babelPolyfill)) {
+  require("babel-polyfill");
+}
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
